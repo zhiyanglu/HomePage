@@ -27,12 +27,12 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #75FAD4;
+  background-color: #333;
 }
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.8);
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -124,7 +124,7 @@ body {
 
 .mastfoot {
   color: #999; /* IE8 proofing */
-  color: #555;
+  color: #9d9d9d;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
@@ -136,16 +136,16 @@ body {
 @media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
-    position: fixed;
-    top: 0;
+    /*position: fixed;*/
+    /*top: 0;*/
   }
   .mastfoot {
-    position: fixed;
-    bottom: 0;
+    /*position: fixed;*/
+    /*bottom: 0;*/
   }
   /* Start the vertical centering */
   .site-wrapper-inner {
-    vertical-align: middle;
+    /*vertical-align: middle;*/
   }
   /* Handle the widths */
   .masthead,
@@ -153,12 +153,50 @@ body {
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
+
+  /*
+   * Home
+   */
+  #home{
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+
 }
 
 @media (min-width: 992px) {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 900px;
+    width: auto;
+    margin-left: 10%;
+    margin-right: 10%;
   }
+}
+
+
+
+/*
+ * Profile
+ */
+#profile{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.profile-title{
+  margin-bottom: 20px;
+}
+.profile-content{
+  margin-bottom: 10px;
+}
+.dl-horizontal dt{
+  text-align: left;
+  width: 100px;
+}
+.dl-horizontal dd{
+  margin-left: 0px;
+  text-shadow: none;
+}
+#skills_list dt{
+  width: 200px;
 }

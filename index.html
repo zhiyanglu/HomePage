@@ -13,7 +13,10 @@
     <title>Zhiyang Lu</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
@@ -36,24 +39,154 @@
 
             <div class="masthead clearfix">
                 <div class="inner">
-                    <h3 class="masthead-brand"><b>Zhiyang Lu</b></h3>
+                    <h1 class="masthead-brand"><b>Zhiyang Lu</b></h1>
                     <nav>
-                        <ul class="nav masthead-nav">
-                            <li class="active"><a href="index.html">Home</a></li>
-                            <li><a href="#">About Me</a></li>
-                            <li><a href="#">Contact</a></li>
+                        <ul class="nav masthead-nav" role="tablist">
+                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">About me</a></li>
+                            <li role="presentation"><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
 
-            <div class="inner cover">
-                <h1 class="cover-heading">Welcome to Zhiyang's Homepage</h1>
-                <p class="lead">My name is Zhiyang Lu, currently a Master student majoring in Computer Science, in Viterbi School of Engineering, University of Southern California. I am looking for full-time positions of Software Engineering after my graduation in May 2016.</p>
-                <p class="lead">
-                    <a href="#" class="btn btn-lg btn-primary">Learn More</a>
-                </p>
+            <div clas="tab-content">
             </div>
+
+            <div class="tab-content">
+                <!--home content-->
+                <div role="tabpanel" class="tab-pane active" id="home">
+                    <div class="inner cover tab-pane" role="tabpanel">
+                        <h1 class="cover-heading">Welcome to Zhiyang's Homepage</h1>
+                        <p class="lead">My name is Zhiyang Lu, currently a Master student majoring in Computer Science, in Viterbi School of Engineering, University of Southern California. I am looking for full-time positions of Software Engineering after my graduation in May 2016.</p>
+                        <p class="lead">
+                            <a href="#" class="btn btn-lg btn-primary">Learn More</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!--profile content-->
+                <div role="tabpanel" class="tab-pane" id="profile">
+
+                    <!--Education-->
+                    <div class="profile-title">
+                        <h3><b><u>Education</u></b></h3>
+                    </div>
+                    <div class="text-left col-md-offset-1 profile-content">
+                        <h4><span class="glyphicon glyphicon-play" aria-hidden="true"></span> <a href="http://www.usc.edu" target="_blank">University of Southern California</a></h4>
+                        <dl class="dl-horizontal">
+                            <dt>Major:</dt>
+                            <dd>M.S. in Computer Science</dd>
+                            <dt>Time:</dt>
+                            <dd>Aug 2014 - May 2016</dd>
+                            <dt>Courses:</dt>
+                            <dd>Operating Systems, Introduction to Computer Networks, Analysis of Algorithms, Web Technologies</dd>
+                            <dt>GPA:</dt>
+                            <dd>3.95/4.0</dd>
+                        </dl>
+                        <br/>
+                        <h4><span class="glyphicon glyphicon-play" aria-hidden="true"></span> <a href="http://www.njupt.edu.cn" target="_blank">Nanjing University of Posts & Telecommunications</a></h4>
+                        <dl class="dl-horizontal">
+                            <dt>Major:</dt>
+                            <dd>B.S. in Electrical Engineering</dd>
+                            <dt>Time:</dt>
+                            <dd>Aug 2010 - Jun 2014</dd>
+                            <dt>Courses:</dt>
+                            <dd>Communication Network Design, Communication Theory, Microprocessors, Discrete Structure, Data Structures, Algorithms</dd>
+                            <dt>GPA:</dt>
+                            <dd>3.63/4.0</dd>
+                        </dl>
+                        <hr/>
+                    </div>
+
+                    <!--Work Exp-->
+                    <div class="profile-title">
+                        <h3><b><u>Internship Experience</u></b></h3>
+                    </div>
+                    <div class="text-left col-md-offset-1 profile-content">
+                        <h4><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Front-end Developer at <u><a href="http://stage.verbocity.com" target="_blank">Verbocity.com</a></u></h4>
+                        <p>Work with a team design and develop a vocabulary learning website. Help redesign the responsive feature of the website using HTML, CSS, JQuery, Bootstrap Framework. Fix related functionalities in back-end with PHP, MySql.</p>
+                        <hr/>
+                    </div>
+
+                    <!--Projects-->
+                    <div class="profile-title">
+                        <h3><b><u>Academic Projects</u></b></h3>
+                    </div>
+                    <div class="text-left col-md-offset-1 profile-content">
+                        <h4><span class="glyphicon glyphicon-play" aria-hidden="true"></span> <a href="https://github.com/zhiyanglu/ebaySearch-Android-app" target="_blank"><u>Android App</u></a> / <a href="https://github.com/zhiyanglu/eBay-Search-Web" target="_blank"><u>Web Design</u></a> for eBay Item Search</h4>
+                        <p>Apr 2015 - May 2015</p>
+                        <p>Use the combination of HTML, CSS, DOM, AJAX, JSON, PHP and Bootstrap technologies to create a webpage that allows user to search items for sale on eBay.com. Also create an Android App version. The result will be displayed in a tabular format which provides the details for each item. A Facebook share function is also implemented. The API allows user to search the items based on the keywords, price range, conditions and other many filters. Pagination is implemented to show more items.</p>
+
+                        <br/>
+
+                        <h4><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Kernel Project of Weenix OS</h4>
+                        <p>Oct 2014 - Dec 2014</p>
+                        <p>Write three basic blocks, including Processes and Threads, Virtual File System and Virtual Memory, of Weenix OS provided by Brown University in C.</p>
+                        <ol style="margin-left: 0px; padding-left: 15px;">
+                            <li>Implement kernel processes, threads and synchronization primitives.</li>
+                            <li>Implement the VFS which supports several system calls like open(), read(), write() and creates an interface for real file systems like RAMFS and S5FS.</li>
+                            <li>Implement the virtual memory to process user address space and system calls like fork() and mmap(). In the end the OS can run user space processes in the user shell.</li>
+                        </ol>
+
+                        <br/>
+
+                        <h4><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Socket Programming Project in C</h4>
+                        <p>Nov 2014 - Dec 2014</p>
+                        <p>Simulated an online medical appointment system using a hybrid architecture of TCP and UDP sockets. The project contains three main phase: 1) Authenticating into the health center server, 2) requesting available appointments and reserving available time, and 3) sending insurance information to the assigned doctor to get the estimation of cost for the appointment.</p>
+
+                        <br/>
+
+                        <h4><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Health Care Device Based on Arduino & Corresponding Android App</h4>
+                        <p>Feb 2014 - May 2014</p>
+                        <p>Collaborated with a team to design a Health Care Device based on Arduino micro controller. Design the main structure; build the function of step counting, heart rate recording and bluetooth communication. An android application is developed to fetch and record the information from the device.</p>
+                        <a href="#" data-toggle="modal" data-target="#demo1"><u>Show Demo</u></a>
+                        <div class="modal fade" id="demo1">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel" style="color: #000000; text-shadow: none;">Sample Demo</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="embed-responsive embed-responsive-4by3">
+                                            <iframe class="embed-responsive-item" src="media/Demo.mp4"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                    </div>
+
+                    <!--Skills-->
+                    <div class="profile-title">
+                        <h3><b><u>Skills</u></b></h3>
+                    </div>
+                    <div id="skills_list" class="text-left col-md-offset-1 profile-content">
+                        <dl class="dl-horizontal">
+                            <dt>Programming Language:</dt>
+                            <dd>Java, C, Javascript, HTML, CSS, PHP, SQL, JQuery, Swift</dd>
+                            <dt>Softwares:</dt>
+                            <dd>Eclipse, Android Studio, VMware, Github, Apache, XAMPP, Matlab</dd>
+                            <dt>Operating Systems:</dt>
+                            <dd>Mac OS, Windows, Linux/Ubuntu</dd>
+                        </dl>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <!--contact content-->
+                <div role="tabpanel" class="tab-pane" id="contact">
+
+                </div>
+            </div>
+
 
 
             <div class="mastfoot">
@@ -61,9 +194,9 @@
                     <p>Zhiyang Lu - 2015</p>
                     <p>
                         <span><a href="https://www.facebook.com/zhiyangl" target="_blank"><img src="icons/fb.png" alt="fb" width="20px" style="background: #000"/></a></span>
-                        -
+                        :
                         <span><a href="https://www.linkedin.com/in/zhiyangl" target="_blank"><img src="icons/li.png" alt="li" width="20px" style="background: #000"/></a></span>
-                        -
+                        :
                         <span><a href="https://github.com/zhiyanglu" target="_blank"><img src="icons/gh.png" alt="gh" width="20px" style="background: #000"/></a></span>
                     </p>
                 </div>
@@ -80,8 +213,18 @@
 <script src="js/jquery-2.1.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
+<script>
+    $('#myTabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+
+</script>
+
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
+
+<noscript>
 </body>
 </html>
