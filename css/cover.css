@@ -158,9 +158,15 @@ body {
    * Home
    */
   #home{
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 50px;
+    padding-bottom: 140px;
   }
+  .portrait{
+    max-height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 
 }
 
@@ -199,4 +205,11 @@ body {
 }
 #skills_list dt{
   width: 200px;
+}
+
+/*
+ * Contact
+ */
+#contact{
+
 }
