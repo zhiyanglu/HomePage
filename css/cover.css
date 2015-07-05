@@ -161,13 +161,6 @@ body {
     padding-top: 50px;
     padding-bottom: 140px;
   }
-  .portrait{
-    /*max-height: 150px;*/
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-
 }
 
 @media (min-width: 992px) {
@@ -178,6 +171,12 @@ body {
     margin-left: 10%;
     margin-right: 10%;
   }
+}
+
+.portrait{
+  /*max-height: 150px;*/
+  margin-left: auto;
+  margin-right: auto;
 }
 
 

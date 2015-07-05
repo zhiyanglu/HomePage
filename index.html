@@ -18,6 +18,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/contact_form.css"/>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -184,9 +185,34 @@
 
                 </div>
 
-                <!--contact content-->
-                <div role="tabpanel" class="tab-pane" id="contact">
 
+                <!--contact content-->
+                <div role="tabpanel" class="tab-pane container col-md-12" id="contact">
+                    <div class="container col-md-6">
+                        <form id="message_form" action="http://zhiyangl.elasticbeanstalk.com/mailer/message.php" class="contact_form" method="post">
+                            <div class="form-group">
+                                <label for="sender_name">Name:</label>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="sender_name" id="sender_name" placeholder="Enter Your Name"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="sender_email">Email:</label>
+                                <input type="email" class="form-control" name="sender_email" id="sender_email" placeholder="Enter Your Email Address"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="sender_message">Message:</label>
+                                <textarea name="sender_message" id="sender_message" cols="30" rows="10" class="form-control" style="resize: none" placeholder="Enter Your Message"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-primary" value="Submit"/>
+                            </div>
+                            <div class="form-group" id="message">Click to Send</div>
+                        </form>
+                    </div>
+                    <div class="container col-md-6" id="google_map">
+
+                    </div>
                 </div>
             </div>
 
@@ -222,6 +248,24 @@
         $(this).tab('show')
     })
 
+    $(function() {
+        $("#message_form").on("submit", function(e) {
+            e.preventDefault();
+            $.ajax({
+                url: $(this).attr("action"),
+                type: 'POST',
+                data: $(this).serialize(),
+
+                error: function(){
+                    $("#message").html("Email has been sent!!");
+                },
+                success: function(data) {
+                    $("#message").html(data);
+                }
+
+            });
+        });
+    });
 </script>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
